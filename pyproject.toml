@@ -1,0 +1,16 @@
+[project]
+name = "tinykv"
+version = "0.3.0"
+description = "A tiny key-value store with expiry and a write-ahead log"
+requires-python = ">=3.14"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+tinykv = "tinykv.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
